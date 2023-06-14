@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booleans practice</title>
+</head>
+
+<body>
+    <script>
+        console.log(3 > 8 - 5);
+
+        // It coverts the datatype
+        // console.log(5 == '5.00'); #true
+        console.log(5 === '5.00'); // false
+
+        const age = 15;
+        if (age >= 16) {
+            console.log('You can drive');
+        }
+        else if (age >= 14) {
+            console.log('Almost there');
+        }
+        else {
+            console.log('You can not drive')
+        }
+
+
+        console.log(true && false);
+        console.log(true || false);
+        console.log(!false);
+
+        if (3) {
+            console.log('truthy');
+        }
+
+        console.log(!0);
+
+        const result = 0 ? 'truthy' : 'falsy';
+        console.log(result);
+
+        const message = 5 && 'hello';
+        console.log(message);
+
+        const currency = undefined || 'usd';
+        console.log(currency);
+    </script>
+</body>
+
+</html>
