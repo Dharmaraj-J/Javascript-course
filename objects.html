@@ -9,6 +9,7 @@
 
 <body>
     <script>
+        /*
         const product = {
             name: 'socks',
             price: 1000
@@ -25,6 +26,39 @@
 
         delete product.newProperty;
         console.log(product);
+         */
+
+
+        const product2 = {
+            name: 'shirt',
+            'delivery-item': '1-day',
+            rating: {
+                stars: 4.6,
+                count: 87
+            },
+            fun: function function1() {
+                console.log('function inside object');
+            }
+        };
+
+        console.log(product2);
+        console.log(product2.name); // Dot Notation
+        console.log(product2['name']); // Bracket Notation
+
+        console.log(product2['delivery-item']);
+
+        console.log(product2.rating.count);
+        product2.fun();
+
+        console.log(typeof console);
+        console.log(typeof console.log);
+
+        console.log(JSON.stringify(product2));
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+
+
     </script>
 </body>
 
