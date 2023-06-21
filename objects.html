@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        /*
+
         const product = {
             name: 'socks',
             price: 1000
@@ -26,7 +26,7 @@
 
         delete product.newProperty;
         console.log(product);
-         */
+
 
 
         const product2 = {
@@ -58,6 +58,44 @@
         const jsonString = JSON.stringify(product2);
         console.log(JSON.parse(jsonString));
 
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const obj1 = {
+            message: 'hi',
+            price: 99
+        };
+        const obj2 = obj1;
+
+        obj1.message = 'Good job!';
+        console.log(obj1);
+        console.log(obj2);
+
+        const obj3 = {
+            message: 'hi',
+            price: 99
+        };
+        console.log(obj1 === obj3);
+        console.log(obj1 === obj2);
+
+        // const message = obj1.message;
+        const { message, price: cost } = obj1;
+        console.log(message);
+        console.log(cost);
+
+        const obj4 = {
+            // message: message
+            message,
+            /* method: function fun1() {
+                return 'method';
+            } */
+            method() {
+                return 'method';
+            }
+        };
+        console.log(obj4.method());
+        console.log(obj4.message);
 
     </script>
 </body>
