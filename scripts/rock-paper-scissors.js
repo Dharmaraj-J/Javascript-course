@@ -15,6 +15,9 @@ updateScoreElement();
     };
   }
   */
+document.querySelector(".js-auto-play-button").addEventListener("click", () => {
+  autoPlay();
+});
 
 let isAutoPlaying = false;
 let intervalId;
@@ -26,9 +29,11 @@ function autoPlay() {
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
+    document.querySelector(".js-auto-play-button").innerHTML = "Stop Playing";
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    document.querySelector(".js-auto-play-button").innerHTML = "Auto Play";
   }
 }
 
@@ -51,6 +56,8 @@ document.body.addEventListener("keydown", (event) => {
     playGame("paper");
   } else if (event.key === "s") {
     playGame("scissors");
+  } else if (event.key === "a") {
+    autoPlay();
   }
 });
 
